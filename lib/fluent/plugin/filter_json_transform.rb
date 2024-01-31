@@ -9,6 +9,8 @@ module Fluent
     config_param :script_path, :string
 
     def configure(conf)
+      super
+
       @transform_script = conf['transform_script']
 
       if DEFAULTS.include?(@transform_script)
